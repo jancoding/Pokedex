@@ -16,7 +16,9 @@ class AdvancedSearchViewController: UIViewController {
     @IBOutlet weak var minHealthPoints: UITextField!
     @IBOutlet weak var minAttackPoints: UITextField!
     @IBOutlet weak var minDefensePoints: UITextField!
-    
+    @IBOutlet weak var maxHealthPoints: UITextField!
+    @IBOutlet weak var maxAttackPoints: UITextField!
+    @IBOutlet weak var maxDefensePoints: UITextField!
     @IBOutlet weak var pokemonTypeCollectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -43,6 +45,10 @@ class AdvancedSearchViewController: UIViewController {
             destinationVC.minAttackPoints = Int(minAttackPoints.text ?? "String") ?? 0
             destinationVC.minDefensePoints = Int(minDefensePoints.text ?? "String") ?? 0
             destinationVC.minHealthPoints = Int(minHealthPoints.text ?? "String") ?? 0
+            destinationVC.maxHealthPoints = Int(maxHealthPoints.text ?? "String") ?? 0
+            destinationVC.maxAttackPoints = Int(maxAttackPoints.text ?? "String") ?? 0
+            destinationVC.maxDefensePoints = Int(maxDefensePoints.text ?? "String") ?? 0
+
             
             destinationVC.isRandom = false
         default: break

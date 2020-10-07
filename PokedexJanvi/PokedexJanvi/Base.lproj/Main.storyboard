@@ -311,7 +311,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9Vx-L6-1YQ" userLabel="Buttons Stack View">
-                                <rect key="frame" x="50" y="428.5" width="314" height="180"/>
+                                <rect key="frame" x="50" y="428.5" width="314" height="330"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Minimum Health Points" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BW6-gA-s1h">
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="30"/>
@@ -324,8 +324,16 @@
                                             <outlet property="delegate" destination="78M-hX-NsA" id="LSU-bc-hN6"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Minimum Attack Points" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yaz-ze-2nf">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Maximum Health Points" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i9o-dY-SgE">
                                         <rect key="frame" x="0.0" y="50" width="314" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="2Tb-YC-YGi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Minimum Attack Points" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yaz-ze-2nf">
+                                        <rect key="frame" x="0.0" y="100" width="314" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="7Nb-TL-0Bh"/>
                                         </constraints>
@@ -335,8 +343,16 @@
                                             <outlet property="delegate" destination="78M-hX-NsA" id="Krs-Zo-b5j"/>
                                         </connections>
                                     </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Maximum Attack Points" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GjQ-fD-jUQ">
+                                        <rect key="frame" x="0.0" y="150" width="314" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="W6O-A8-nAI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Minimum Defense Points" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2r7-BO-eFr">
-                                        <rect key="frame" x="0.0" y="100" width="314" height="30"/>
+                                        <rect key="frame" x="0.0" y="200" width="314" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="6YS-3D-utF"/>
                                         </constraints>
@@ -346,8 +362,16 @@
                                             <outlet property="delegate" destination="78M-hX-NsA" id="dVB-uK-J2s"/>
                                         </connections>
                                     </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Maximum Defense Points" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BTZ-4j-J4K">
+                                        <rect key="frame" x="0.0" y="250" width="314" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="nKh-Ow-BSr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLZ-Uc-fOP">
-                                        <rect key="frame" x="0.0" y="150" width="314" height="30"/>
+                                        <rect key="frame" x="0.0" y="300" width="314" height="30"/>
                                         <color key="backgroundColor" systemColor="linkColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="5Wf-xW-RED"/>
@@ -366,10 +390,11 @@
                                     <constraint firstAttribute="trailing" secondItem="yaz-ze-2nf" secondAttribute="trailing" id="96w-ge-kyh"/>
                                     <constraint firstAttribute="trailing" secondItem="BW6-gA-s1h" secondAttribute="trailing" id="Pxu-ab-Dhq"/>
                                     <constraint firstAttribute="trailing" secondItem="2r7-BO-eFr" secondAttribute="trailing" id="SQm-0J-0uQ"/>
-                                    <constraint firstItem="2r7-BO-eFr" firstAttribute="top" secondItem="yaz-ze-2nf" secondAttribute="bottom" constant="20" id="Ysc-Cb-NTz"/>
-                                    <constraint firstItem="yaz-ze-2nf" firstAttribute="top" secondItem="BW6-gA-s1h" secondAttribute="bottom" constant="20" id="cLL-Ea-Xo3"/>
-                                    <constraint firstItem="QLZ-Uc-fOP" firstAttribute="top" secondItem="2r7-BO-eFr" secondAttribute="bottom" constant="20" id="ctW-Vo-yCZ"/>
+                                    <constraint firstItem="2r7-BO-eFr" firstAttribute="top" secondItem="GjQ-fD-jUQ" secondAttribute="bottom" constant="20" id="Ysc-Cb-NTz"/>
+                                    <constraint firstItem="yaz-ze-2nf" firstAttribute="top" secondItem="i9o-dY-SgE" secondAttribute="bottom" constant="20" id="cLL-Ea-Xo3"/>
+                                    <constraint firstItem="QLZ-Uc-fOP" firstAttribute="top" secondItem="BTZ-4j-J4K" secondAttribute="bottom" constant="20" id="ctW-Vo-yCZ"/>
                                     <constraint firstAttribute="width" constant="314" id="kqP-7x-1jm"/>
+                                    <constraint firstItem="BTZ-4j-J4K" firstAttribute="top" secondItem="2r7-BO-eFr" secondAttribute="bottom" constant="20" id="l88-e0-egF"/>
                                     <constraint firstAttribute="trailing" secondItem="QLZ-Uc-fOP" secondAttribute="trailing" id="oqU-IQ-xjp"/>
                                     <constraint firstItem="2r7-BO-eFr" firstAttribute="leading" secondItem="9Vx-L6-1YQ" secondAttribute="leading" id="qMj-tC-T1n"/>
                                     <constraint firstItem="QLZ-Uc-fOP" firstAttribute="leading" secondItem="9Vx-L6-1YQ" secondAttribute="leading" id="uCN-SV-wbm"/>
@@ -392,6 +417,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="xD0-hP-rTp"/>
                     <connections>
+                        <outlet property="maxAttackPoints" destination="GjQ-fD-jUQ" id="W7o-P7-87b"/>
+                        <outlet property="maxDefensePoints" destination="BTZ-4j-J4K" id="5WH-eC-xRK"/>
+                        <outlet property="maxHealthPoints" destination="i9o-dY-SgE" id="JNO-GP-APx"/>
                         <outlet property="minAttackPoints" destination="yaz-ze-2nf" id="Leo-ps-kFm"/>
                         <outlet property="minDefensePoints" destination="2r7-BO-eFr" id="cGS-1J-9fu"/>
                         <outlet property="minHealthPoints" destination="BW6-gA-s1h" id="duS-6R-k14"/>
@@ -512,7 +540,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mmD-ZK-59q"/>
+        <segue reference="Q0k-JJ-Aha"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Checkmark" width="30" height="30"/>

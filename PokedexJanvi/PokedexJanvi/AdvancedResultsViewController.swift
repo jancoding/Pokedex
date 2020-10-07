@@ -16,7 +16,7 @@ class AdvancedResultsViewController: UIViewController {
     var isGrid = false
 
     
-    var minAttackPoints, minDefensePoints, minHealthPoints: Int!
+    var minAttackPoints, minDefensePoints, minHealthPoints, maxHealthPoints, maxAttackPoints, maxDefensePoints: Int!
     var isRandom: Bool!
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -58,9 +58,9 @@ class AdvancedResultsViewController: UIViewController {
                 categoryFilteredPokemon = categoryFilteredPokemon.filter { $0.types.contains(PokeType(rawValue: typeList[i])!) }
             }
         }
-        categoryFilteredPokemon = categoryFilteredPokemon.filter { $0.attack >= minAttackPoints}
-        categoryFilteredPokemon = categoryFilteredPokemon.filter { $0.defense >= minDefensePoints}
-        categoryFilteredPokemon = categoryFilteredPokemon.filter { $0.health >= minHealthPoints}
+        categoryFilteredPokemon = categoryFilteredPokemon.filter { $0.attack >= minAttackPoints && $0.attack <= maxAttackPoints}
+        categoryFilteredPokemon = categoryFilteredPokemon.filter { $0.defense >= minDefensePoints && $0.defense <= maxDefensePoints}
+        categoryFilteredPokemon = categoryFilteredPokemon.filter { $0.health >= minHealthPoints && $0.health <= maxHealthPoints}
     }
     
 
