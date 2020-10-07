@@ -10,13 +10,13 @@ import UIKit
 class PokemonCell: UICollectionViewCell {
 
     
-    @IBOutlet weak var pokemonName: UILabel!
+    @IBOutlet weak var pokemonImage: UIImageView!
     
     @IBOutlet weak var pokemonNumber: UILabel!
     
-    @IBOutlet weak var pokemonImage: UIImageView!
+    @IBOutlet weak var pokemonName: UILabel!
     
-    override func awakeFromNib() { 
+    override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }

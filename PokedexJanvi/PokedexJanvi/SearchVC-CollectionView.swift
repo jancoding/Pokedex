@@ -58,7 +58,21 @@ extension SearchVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         currentIndexPath = indexPath
-        //self.performSegue(withIdentifier: "searchToProfile", sender: self)
+        self.performSegue(withIdentifier: "searchToProfile", sender: self)
     }
 }
 
+
+/*
+extension SearchVC: UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let yourWidth = collectionView.bounds.width/2.0
+
+        return CGSize(width: yourWidth, height: 50)
+    }
+
+   
+}
+ */
+ 
+ 
